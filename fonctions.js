@@ -144,4 +144,44 @@ function moreRecentFilm() {
     console.log(response)
 }
 
+//Créer une fonction de recherche qui prend en paramètre un genre et doit retourner les nombres des films auquel ce genre est présent.
+var film2 = reshearchByGenre("Romance");
+
+function reshearchByGenre(param1) {
+    var number = [];
+    for (var i in films) {
+        for (var t in films[i].Genre)
+        if (param1 === films[i].Genre[t]) {
+            number.push(i)
+        }
+    }
+    console.log(number);
+}
+//Créer une fonction de recherche qui prend en paramètre un acteur et doit retourner les nombres des films auquel cet acteur est présent.
+var film2 = reshearchByActor("Jamie Foxx");
+
+function reshearchByActor(param1) {
+    var number = [];
+    for (var i in films) {
+        for (var t in films[i].Acteur)
+        if (param1 === films[i].Acteur[t]) {
+            number.push(i)
+        }
+    }
+    console.log(number);
+}
+//Créer une fonction de recherche qui prend en paramètre une année et doit retourner les nombres des films auquel l’année est supérieur.
+var film2 = reshearchByAnnée(2015);
+
+function reshearchByAnnée(param1) {
+    var number = [];
+    for (var i in films) {
+        if (param1 > films[i].Année) {
+            number.push(i)
+        }
+    }
+    console.log(number);
+}
+
+
 
